@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Honesome</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap"
+        rel="stylesheet">
+
+ 
+
+</head>
+
+<body>
+
+    <div class="main-container">
+        <header class="header">
+            <div class="header_container">
+                <img src="Images/peach.png" alt="peach logo" class="header__logo" height="40px">
+                <h1 class="header__title">Honesome</h1>
+            </div>
+            <a href="javascript:void(0);" class="header__hamburger-link" onclick="burgerClicked()">
+                <img src="Images/hamburger.svg" class="header__hamburger-icon" height="50px">
+            </a>
+            <nav class="header__nav navHide" id="navShowHide">
+                <a href="javascript:void(0);" class="header__nav-closebtn" onclick="closeClicked()"><i class="fa-solid fa-x"></i></a>
+                <ul class="header_list">
+                    <li class="header__items"><a class="header__links" href="#">About us</a></li>
+                    <li class="header__items"><a class="header__links" href="#">Facilities</a></li>
+                    <li class="header__items"><a class="header__links" href="#">Pricing</a></li>
+                    <li class="header__items"><a class="header__links" href="#">Facilities</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="section-hero">
+
+           <div class="section-hero__top-container"> 
+                <a href="#" class="section-hero__btn">POPULAR JOB FINDER</a>
+                <img class="section-hero__icon" src="Images/working.png">
+            </div>
+            <div class="section-hero__title">
+                <h1 class="section-hero__heading">Finding the Career Path for you</h1>
+                <p class="section-hero__subheading">Explore thousand of job opportunities with all the Information you
+                    need. Its your future. Come find it, manage all your job application from start to finish.</p>
+            </div>
+            <div class="section-hero__search-box">
+               
+                <input class="section-hero__search-box___search-input"  id="search-input" onfocus="focused()" onfocusout="unFocused()" type="text" placeholder="Find your dream job">
+            
+                <a href="#" class="section-hero__search-btn">Go</a>
+                <ul class="autocomplete-list" id="job-list">
+                    
+                </ul>
+            </div>
+            <div class="section-hero__companies-joined">
+                <div class="section-hero__companies-joined___images">
+                    <img src="Images/companyimage1.jpg"/>
+                    <img src="Images/companyimage2.jpg"/>
+                    <img src="Images/companyimage3.jpg"/>
+                    
+                </div>
+                <div class="section-hero__ompanies-joined___text">
+                    <h3>1.000</h3>
+                    <p>Trusted companies has joined</p>
+                </div>
+
+            </div>
+        </section>
+        <section class="section-stats">
+            <div class="section-stats__img-container">
+                <img class="section-stats__img" src="Images/stats-image1.jpg">
+                <img class="section-stats__img" src="Images/stats-image2.jpg">
+            </div> 
+            <div class="section-stats__card">
+                <div class="section-stats__card___text">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <p>130 total applicants</p>
+                </div>
+                <div class="section-stats__graph">
+                    <div>
+                        
+                            <h1>90%</h1>
+                            <p>Certified</p>
+                        
+                    </div>
+                </div>
+            </div>  
+            <div class="section-stats__card">
+                <div class="section-stats__card___text">
+                    <p>Company Hiring</p>
+                </div>
+                <div class="section-stats__company-list">
+                    <ul>
+                        <li>
+                            <div class="section-stats__card___text list">
+                                <img src="Images/companyname1.png">
+                                <div class="section-stats__card___text___container">
+                                <p class="section-stats__card___text__big">
+                                    Larsen and Gabroo
+                                </p>
+                                <p class="section-stats__card___text__small">
+                                  UI/UX
+                                </p>
+                            </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="section-stats__card___text list">
+                                <img src="Images/companyname1.png">
+                                <div class="section-stats__card___text___container">
+                                <p class="section-stats__card___text__big">
+                                    Logifek
+                                </p>
+                                <p class="section-stats__card___text__small">
+                                  Technical team
+                                </p>
+                            </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="section-stats__card___text list">
+                                <img src="Images/companyname1.png">
+                                <div class="section-stats__card___text___container">
+                                <p class="section-stats__card___text__big">
+                                    GI Private ltd
+                                </p>
+                                <p class="section-stats__card___text__small">
+                                  Web developer
+                                </p>
+                            </div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>   
+        </section>
+        
+    </div>
+    <section class="section-middle">
+        <h1 class="section-middle__title">One platform one solution</h1>
+        <div id="slider">
+            <figure>
+                <div class="container">
+                    <img src="Images/work1.png">
+                    <div class="content">
+                        <h1>Marketing & Communication</h1>
+                        <p>120 Jobs available</p>
+                      
+                    </div>
+                </div>
+                <div class="container"> 
+                    <img src="Images/work2.png">
+                    <div class="content">
+                        <h1>Business Development & sales</h1>
+                        <p>60 Jobs available</p>
+                      
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="Images/work3.png">
+                    <div class="content">
+                        <h1>Programming</h1>
+                        <p>158 Jobs available</p>
+                      
+                    </div>
+                </div>
+                
+                
+            </figure>
+         </div>   
+         <div class="section-middle__jobs">
+            <h1 class="section-middle__title">Some open jobs <br>for you.</h1>
+            <p class="section-middle__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, ullamco laboris nisi ut aliquip ex ea </p>
+            <div class="section-middle__job-posting">
+                <div class="section-middle__job-posting___company-grid">
+                    <img class="company-grid__img" src="Images/shuffle.png">
+                    <h3 class="section-middle__company-name">Codebrick</h3>
+                    <p class="section-middle__company-location">Jakarta, Indonesia</p>
+                    <i class="fa-regular fa-bookmark company-grid__icon"></i>
+                </div> 
+                <h4 class="section-middle__job-title">Product Operation Lead</h4>
+                <p class="section-middle__job-type">Full Time</p>
+                <p class="section-middle__job-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+                <p class="section-middle__job-payment"><span>$7200 </span><span>/ month</span></p>
+                <button class="section-middle__apply-button">Apply Job</button>
+            </div> 
+            <div class="section-middle__jobs___more-jobs">
+                <div class="section-middle__jobs___more-jobs___content">
+                    <h2 class="section-middle__jobs___more-jobs__title">Want to see more jobs in Makaryo</h2>
+                    <button class="section-middle__apply-button second">See more jobs</button>
+                </div>
+               
+            </div>
+            
+         </div>
+    </section>
+   
+    <script src='main.js'></script>
+</body>
+
+</html>
