@@ -58,3 +58,47 @@ function focused(){
     joblistElement.style.display = "block";
 }
 
+const selectionOne = document.querySelector(".header");
+
+const selectionToObserve = document.querySelector(".section-hero");
+
+const options = {
+    root: null,
+    threshold: 0,
+    rootMargin: "-600px 0px 0px 0px",
+};
+
+const observer = new IntersectionObserver(function(entries, observer){
+    entries.forEach(entry => {
+        if(!entry.isIntersecting){
+            selectionOne.classList.add("nav-scrolled");
+            document.querySelector(".header__title").style.color = "#39273F";
+            document.documentElement.style.setProperty("--javacript-color", "#39273F");
+
+            var elements = document.getElementsByClassName("header__links");
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.color="#39273F";
+            }   
+            
+            
+        }
+        else{
+            selectionOne.classList.remove("nav-scrolled");
+            document.querySelector(".header__title").style.color = "white";
+            var elements = document.getElementsByClassName("header__links");
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.color="white";
+            }  
+
+            document.documentElement.style.setProperty("--javacript-color", "white");
+            
+        }
+    });
+}, options); 
+
+
+
+
+    observer.observe(selectionToObserve);
+
+

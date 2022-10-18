@@ -5,6 +5,7 @@
     --secondary-color: #39273F;
     --background-color: #424242;
     --primary-text-color: #FDF7FB;
+    --javacript-color: #39273F;
 }   
 
 *{
@@ -15,7 +16,7 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-    font-size: 62.5%;
+    font-size: 55.5%;
     
 }
 
@@ -114,7 +115,7 @@ body{
     padding: 1rem;
     border-radius: 5px;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: all .5s;
 }
 .section-hero__btn:hover,
@@ -134,7 +135,7 @@ body{
     margin-bottom: 2rem;
 }
 .section-hero__heading{
-    font-size: 2.8rem;
+    font-size: 2rem;
     line-height: 1.2;
     color: #c9c9c9;
     margin-bottom: .5rem;
@@ -152,7 +153,12 @@ body{
     height: 4rem;
     display: flex;
     position: relative;
+    max-width: 600px;
     
+}
+
+.section-middle__job-posting__card{
+    margin-top: 2   rem;
 }
 
 .section-hero__search-box___search-input{
@@ -260,6 +266,8 @@ input{
 /*section status */
 .section-stats{
     margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto  ;
     position: relative;
     max-width: 25rem;
     min-width: 20rem;
@@ -291,7 +299,7 @@ input{
     
 }
 .section-stats__card:nth-child(2){
-    
+    position: absolute ;
     top: 5%;
     left: 0;
 }
@@ -385,6 +393,8 @@ x
 
 #slider{
     overflow: hidden;
+    width: 25rem;
+    margin: 0 auto;
 }
 #slider figure{
     position: relative;
@@ -394,17 +404,20 @@ x
     flex-direction: row;
     animation: 5s slider infinite;
     
+    
 }
 #slider figure .container{
     width: 100vw;
     margin: 3rem;
     position: relative;
     cursor: pointer;
+   
 }
 #slider figure div img{
-    object-fit: contain;
-    
+    object-fit: cover;
+    height: 100%;    
     width: 100%;
+    
  
 }
 #slider figure div .content{
@@ -419,16 +432,21 @@ x
     width: 100%;
     z-index: 1000;
     color: white;
+    
+    
     background: linear-gradient(to top , rgba(3, 3, 3, 0.616) 30%, transparent 70%);
 }
 .content h1{
     font-weight: 600;
-    
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 1rem;
 
 }
 
 .section-middle__jobs{
-    margin-top: 2rem;
+    margin: 2rem auto;
+    max-width: 30rem;
 }
 
 .section-middle__subtitle{
@@ -439,7 +457,8 @@ x
 }
 
 .section-middle__job-posting{
-    margin:3rem 2rem;
+    margin:3rem auto;
+    max-width: 30rem;
 }
 .section-middle__job-posting___company-grid{
     display: grid;
@@ -526,7 +545,8 @@ x
     cursor: pointer;
 }
 .section-middle__jobs___more-jobs{
-    margin: 2rem;
+    margin: 2rem auto;
+    max-width: 30rem;
     background: url(Images/abstract.png) no-repeat;
     height: 300px;
     background-size: cover;
@@ -548,6 +568,239 @@ x
     color: white;
     padding-top: 2rem;
 }
+.footer-section{
+    padding: 4rem;
+    background-color: var(--background-color);
+}
+.footer-section__title{
+    
+    font-size: 1.6rem;
+    text-align: center;
+    color: white;
+}
+.footer-section__title span{
+    color: var(--primary-color1);
+}
+.footer-section__grid{
+    display: grid;
+    grid-template-columns: repeat(4, 5rem);
+    align-items: center;
+  justify-content: center;
+    column-gap: 2rem;
+    margin-top: 2rem;
+    row-gap: 2rem;
+}
+.footer-section__grid img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.section-hero{
+    max-width: 600px;
+}
+
+.section-middle__job-description{
+    max-width:20rem;
+}
+
+@media only screen and (min-width: 480px) {
+    body{
+    font-size: 62.5%;
+    
+    }
+    .section-hero__heading{
+        font-size: 2.8rem;
+    }
+    .header__title{
+        
+    }
+    .section-hero__btn:link{
+        font-size: 1.2rem;
+    }
+    .section-hero__ompanies-joined___text h3{
+        font-size: 1.4rem;
+    }
+    .section-hero__ompanies-joined___text p{
+        font-size: 1rem;
+    }
+    .section-hero__companies-joined___images img{
+        height: 50px;
+        width: 50px;
+    }
+    
+}
+@media only screen and (min-width: 1000px) {
+
+    .section-middle__jobs{
+        max-width: none;
+        padding: 0 3rem;
+       
+    }
+    .footer-section__grid {
+        grid-template-columns:repeat(4, 7rem );
+        column-gap:4rem;
+    }
+    .section-middle__job-posting{
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .section-middle__job-posting{
+        max-width: 1200px;
+    }
+    .section-middle__job-posting__card{
+        margin-right: 2rem;
+        
+    }
+
+    
+    .footer-section__title{
+        font-size: 2rem;
+    }
+    .section-middle__jobs___more-jobs{
+        position: relative;
+        max-width: none ;
+        height: 80vh;
+    }
+    .second{
+        max-width: 30rem;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+
+    #slider{
+        width: auto;
+    }
+
+  #slider figure{
+    width: auto;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  #slider figure .container{
+      margin: 4rem;
+  }
+  .content h1{
+      font-size: 1.3rem;
+  }
+    .section-hero-sidebyside{
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1400px;
+        margin: 5rem auto;
+    }
+    
+    .section-hero{
+        max-width: 600px;
+    }
+    
+    #slider figure{
+        animation: none;
+    }
+
+    .navHide{
+        display: block;
+        position: fixed;
+        top: -2.3rem;
+        right: 2rem;
+        
+    }
+    .header{
+        
+        position: fixed;
+         width: 100%;
+         z-index: 5000;
+         top: 0;
+         left: 0;
+         padding-top: 2rem;
+         padding-bottom: 1.5rem;
+         padding-left: 4rem;
+         padding-right: 4rem;
+    }
+    .header_list{
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+        
+    }
+    .header__nav{
+        background-color: transparent;
+        
+    }
+    .header__links{
+        color: white;
+        transition: border-color .5s;
+        border-bottom: 2px solid transparent;
+    }
+    .header__items{
+        margin-left: 3rem;
+    }
+    #navShowHide i{
+        display: none;
+    }
+    .header__hamburger-link{
+        display: none;
+    }
+
+    .nav-scrolled{
+    background-color: var(--primary-color);
+    
+    }
+    .header__links:hover,
+    .header__links:active{
+    
+    background-color: transparent;
+
+    border-bottom: 2px solid var(--javacript-color);
+    
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    body{
+        font-size: 72.5%;
+    
+    }
+    .section-hero{
+        max-width: 700px;
+    }
+    .content h1{
+        font-size: 1.5rem;
+    }
+    
+    
+    .section-stats{
+        max-width: 50rem;
+        min-width: 30rem;
+        margin-left: 20rem;
+    }
+    .section-stats__img{
+        height: 16rem;
+    }
+    .section-stats__card{
+        width: 10rem;
+        height: 11rem;
+    }
+    .section-stats__card___text__big{
+        font-size: 10px;
+    }
+    .section-stats__card___text__small{
+        font-size: 8px;
+    }
+    .section-stats__card___text img{
+        height: 1.5rem;
+        margin-top: 0.1rem;
+        margin-right: .7rem;
+    }
+}
+
 @keyframes slider{
     0%{
         left: 0;
