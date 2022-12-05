@@ -158,7 +158,7 @@ body{
 }
 
 .section-middle__job-posting__card{
-    margin-top: 2   rem;
+    margin-top: 2rem;
 }
 
 .section-hero__search-box___search-input{
@@ -602,6 +602,23 @@ x
 .section-middle__job-description{
     max-width:20rem;
 }
+@media only screen and (max-width: 560px) {
+    .section-middle__job-posting{
+        padding: 0 2rem;
+        
+    }
+    
+    .footer-section__grid{
+        column-gap: .2rem;
+    }
+    .footer-section__grid img{
+        width: 85%;
+        height: 85%;
+    }
+    .footer-section__title{
+        font-size: 1.2rem;
+    }
+}
 
 @media only screen and (min-width: 480px) {
     body{
@@ -611,9 +628,7 @@ x
     .section-hero__heading{
         font-size: 2.8rem;
     }
-    .header__title{
-        
-    }
+    
     .section-hero__btn:link{
         font-size: 1.2rem;
     }
@@ -628,8 +643,12 @@ x
         width: 50px;
     }
     
+   
+    
 }
 @media only screen and (min-width: 1000px) {
+
+
 
     .section-middle__jobs{
         max-width: none;

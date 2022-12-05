@@ -65,10 +65,11 @@ const selectionToObserve = document.querySelector(".section-hero");
 const options = {
     root: null,
     threshold: 0,
-    rootMargin: "-600px 0px 0px 0px",
+    rootMargin: "-550px 0px 0px 0px",
 };
 
 const observer = new IntersectionObserver(function(entries, observer){
+    
     entries.forEach(entry => {
         if(!entry.isIntersecting){
             selectionOne.classList.add("nav-scrolled");
